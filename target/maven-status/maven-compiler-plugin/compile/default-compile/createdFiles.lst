@@ -1,7 +1,10 @@
+cz\maku\servershandler\servers\type\State.class
+cz\maku\servershandler\ServersManager.class
+cz\maku\servershandler\servers\type\Mode.class
+cz\maku\servershandler\jedis\JedisHandler.class
+cz\maku\servershandler\servers\Updater.class
 cz\maku\servershandler\events\BukkitEvents.class
 cz\maku\servershandler\Instance.class
-cz\maku\servershandler\ServersManager.class
-cz\maku\servershandler\jedis\JedisHandler.class
 cz\maku\servershandler\servers\ServerUpdater.class
 cz\maku\servershandler\ServersHandler.class
 cz\maku\servershandler\ServersHandler$1.class

@@ -2,7 +2,9 @@ package cz.maku.servershandler;
 
 import cz.maku.servershandler.jedis.JedisHandler;
 import cz.maku.servershandler.servers.Server;
+import cz.maku.servershandler.servers.ServerUpdater;
 
+import java.util.List;
 import java.util.Map;
 
 public class ServersManager {
@@ -21,5 +23,17 @@ public class ServersManager {
 
     public static JedisHandler getJedisHandler() {
         return getServersHandler().getJedisHandler();
+    }
+
+    public static List<ServerUpdater> getUpdaters() {
+        return getServersHandler().getUpdater().getUpdaters();
+    }
+
+    public static void add(ServerUpdater serverUpdater) {
+        getServersHandler().getUpdater().add(serverUpdater);
+    }
+
+    public static void remove(ServerUpdater serverUpdater) {
+        getServersHandler().getUpdater().remove(serverUpdater);
     }
 }

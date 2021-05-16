@@ -4,6 +4,11 @@ jedis:
   password: "password"
 
 server:
+  # string
   name: Dev
+  # integer
   id: 1
+  # true, false
   privateServer: true
+  # TWO, FOUR
+  mode: TWO
