@@ -33,7 +33,7 @@ public class Server {
     public void setOnline(int online) {
         this.online = online;
         ServersHandler serversHandler = Instance.getInstance().getServersHandler();
-        serversHandler.getJedisHandler().getJedis().hset("servers", name, serversHandler.deserialize(this));
+        serversHandler.getJedisHandler().getJedis().hset("mservers", name, serversHandler.deserialize(this));
         serversHandler.publish();
         serversHandler.onServersUpdate(serversHandler.getServers());
     }

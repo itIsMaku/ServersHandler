@@ -34,14 +34,14 @@ public class ServersHandler implements ServerUpdater {
     }
 
     public void download() {
-        Map<String, String> map = jedisHandler.getJedis().hgetAll("servers");
+        Map<String, String> map = jedisHandler.getJedis().hgetAll("mservers");
         map.forEach((name, deserializedServer) -> {
             servers.put(name, serialize(deserializedServer));
         });
     }
 
     public void upload() {
-        jedisHandler.getJedis().hset("servers", server.getName(), deserialize(server));
+        jedisHandler.getJedis().hset("mservers", server.getName(), deserialize(server));
         servers.put(server.getName(), server);
     }
 
@@ -51,7 +51,7 @@ public class ServersHandler implements ServerUpdater {
             public void onMessage(String channel, String message) {
                 if (channel.equalsIgnoreCase("channel1")) {
                     if (servers.containsKey(message.replace("update: ", ""))) {
-                        servers.put(message.replace("update: ", ""), serialize(jedisHandler.getJedis().hget("servers", message.replace("update: ", ""))));
+                        servers.put(message.replace("update: ", ""), serialize(jedisHandler.getJedis().hget("mservers", message.replace("update: ", ""))));
                     }
                 }
             }
@@ -64,7 +64,7 @@ public class ServersHandler implements ServerUpdater {
     }
 
     public void stop() {
-        jedisHandler.getJedis().hdel("servers", server.getName());
+        jedisHandler.getJedis().hdel("mservers", server.getName());
         jedisHandler.getJedis().disconnect();
     }
 
