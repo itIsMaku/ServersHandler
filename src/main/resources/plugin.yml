@@ -1,0 +1,4 @@
+name: ServersHandler
+version: 1.0
+description: Handling spigot servers with Redis (Jedis client)
+main: cz.maku.servershandler.Instance
