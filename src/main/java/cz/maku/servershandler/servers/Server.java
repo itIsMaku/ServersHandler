@@ -1,11 +1,14 @@
 package cz.maku.servershandler.servers;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import cz.maku.servershandler.Instance;
 import cz.maku.servershandler.ServersHandler;
 import cz.maku.servershandler.servers.type.Mode;
 import cz.maku.servershandler.servers.type.State;
 import lombok.Getter;
 import org.bukkit.Bukkit;
+import redis.clients.jedis.Jedis;
 
 @Getter
 public class Server {
@@ -65,8 +68,8 @@ public class Server {
 
     private void update() {
         ServersHandler serversHandler = Instance.getInstance().getServersHandler();
-        serversHandler.getJedisHandler().getJedis().hset("mservers", name + "-" + id, serversHandler.deserialize(this));
-        serversHandler.publish();
+        serversHandler.getJedisHandler().getJedis().hset("mservers", name + "-" + id, serversHandler.serialize(this));
+        serversHandler.getServers().put(name + "-" + id, this);
         serversHandler.getUpdater().getUpdaters().forEach(updater -> {
             updater.onServersUpdate(serversHandler.getServers());
         });
@@ -85,5 +88,20 @@ public class Server {
     public void setMap(String map) {
         this.map = map;
         update();
+    }
+
+
+    @Override
+    public String toString() {
+        return "Server{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", privateServer=" + privateServer +
+                ", maxOnline=" + maxOnline +
+                ", online=" + online +
+                ", mode=" + mode +
+                ", map='" + map + '\'' +
+                ", state=" + state +
+                '}';
     }
 }
