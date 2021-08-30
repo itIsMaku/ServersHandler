@@ -2,7 +2,6 @@ package cz.maku.servershandler;
 
 import cz.maku.servershandler.events.BukkitEvents;
 import lombok.Getter;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Instance extends JavaPlugin {

@@ -1,14 +1,11 @@
 package cz.maku.servershandler.servers;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import cz.maku.servershandler.Instance;
 import cz.maku.servershandler.ServersHandler;
 import cz.maku.servershandler.servers.type.Mode;
 import cz.maku.servershandler.servers.type.State;
 import lombok.Getter;
 import org.bukkit.Bukkit;
-import redis.clients.jedis.Jedis;
 
 @Getter
 public class Server {
