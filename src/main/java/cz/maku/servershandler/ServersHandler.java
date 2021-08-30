@@ -7,7 +7,6 @@ import cz.maku.servershandler.servers.Updater;
 import cz.maku.servershandler.servers.type.Mode;
 import cz.maku.servershandler.servers.type.State;
 import lombok.Getter;
-import net.md_5.bungee.api.ChatColor;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPubSub;
 
