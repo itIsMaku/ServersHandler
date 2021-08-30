@@ -1,4 +1,4 @@
-package cz.maku.servershandler.servers;
+package cz.maku.servershandler.servers.cons;
 
 import cz.maku.servershandler.Instance;
 import cz.maku.servershandler.ServersHandler;

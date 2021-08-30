@@ -1,4 +1,4 @@
-package cz.maku.servershandler.menu.utils;
+package cz.maku.servershandler.menu.enums;
 
 public enum Rows {
 
