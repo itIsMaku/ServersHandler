@@ -1,8 +1,8 @@
 package cz.maku.servershandler;
 
 import cz.maku.servershandler.jedis.JedisHandler;
-import cz.maku.servershandler.servers.Server;
-import cz.maku.servershandler.servers.ServerUpdater;
+import cz.maku.servershandler.servers.cons.Server;
+import cz.maku.servershandler.servers.interfaces.ServerUpdater;
 
 import java.util.List;
 import java.util.Map;

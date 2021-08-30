@@ -4,7 +4,7 @@ import cz.maku.servershandler.item.ItemBuilder;
 import cz.maku.servershandler.item.serializable.ItemSection;
 import cz.maku.servershandler.item.serializable.SerializableItemBuilder;
 import cz.maku.servershandler.menu.utils.ColorUtil;
-import cz.maku.servershandler.menu.utils.Rows;
+import cz.maku.servershandler.menu.enums.Rows;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;

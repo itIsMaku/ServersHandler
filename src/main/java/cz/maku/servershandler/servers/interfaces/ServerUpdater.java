@@ -1,4 +1,6 @@
-package cz.maku.servershandler.servers;
+package cz.maku.servershandler.servers.interfaces;
+
+import cz.maku.servershandler.servers.cons.Server;
 
 import java.util.Map;
 

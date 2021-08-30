@@ -2,7 +2,7 @@ package cz.maku.servershandler;
 
 import com.google.common.collect.Maps;
 import cz.maku.servershandler.jedis.JedisHandler;
-import cz.maku.servershandler.servers.Server;
+import cz.maku.servershandler.servers.cons.Server;
 import cz.maku.servershandler.servers.Updater;
 import cz.maku.servershandler.servers.type.Mode;
 import cz.maku.servershandler.servers.type.State;

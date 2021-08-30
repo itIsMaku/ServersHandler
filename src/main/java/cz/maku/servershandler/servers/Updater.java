@@ -1,6 +1,7 @@
 package cz.maku.servershandler.servers;
 
 import com.google.common.collect.Lists;
+import cz.maku.servershandler.servers.interfaces.ServerUpdater;
 import lombok.Getter;
 
 import java.util.List;
