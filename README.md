@@ -1,4 +1,4 @@
-# ServersHandler 2.0
+# ServersHandler 2.0 [![](https://jitpack.io/v/itIsMaku/ServersHandler.svg)](https://jitpack.io/#itIsMaku/ServersHandler) ![release](https://img.shields.io/github/v/release/itIsMaku/ServersHandler)
 A complete rewrite of a 2 years old project.
 
 ## Example
@@ -48,4 +48,33 @@ public class Example extends JavaPlugin {
         serversHandler.publish(local);
     }
 }
+```
+
+## Adding to your project
+### Gradle
+```gradle
+repositories {
+  maven { url 'https://jitpack.io' }
+}
+```
+```gradle
+dependencies {
+  implementation 'com.github.itIsMaku:ServersHandler:2.0.1'
+}
+```
+
+
+### Maven
+```xml
+<repository>
+  <id>jitpack.io</id>
+  <url>https://jitpack.io</url>
+</repository>
+```
+```xml
+<dependency>
+  <groupId>com.github.itIsMaku</groupId>
+  <artifactId>ServersHandler</artifactId>
+  <version>2.0.1</version>
+</dependency>
 ```
