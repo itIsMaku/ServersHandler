@@ -1,5 +1,5 @@
 # ServersHandler 2.0
-A complete rewrite of a 2 year old project.
+A complete rewrite of a 2 years old project.
 
 ## Example
 ```java
